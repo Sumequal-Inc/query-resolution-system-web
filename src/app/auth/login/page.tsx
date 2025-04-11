@@ -57,7 +57,7 @@ export default function LoginPage() {
           >
             <AdbIcon sx={{ fontSize: 100, color: 'primary.main' }} />
             <Typography variant="h5" mt={2} color="primary">
-              AI-Powered Query System
+              Query resolution System
             </Typography>
             <Typography variant="body1" textAlign="center" mt={1} color="text.secondary">
               Smart Support for Tech, HR, Sales, and more.
