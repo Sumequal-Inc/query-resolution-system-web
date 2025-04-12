@@ -1,7 +1,6 @@
-// app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
-import { AuthProvider } from './context/AuthContext'; 
+import { AuthProvider } from './context/AuthContext';
 
 export const metadata: Metadata = {
   title: 'Query Resolution System',
@@ -11,10 +10,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode; 
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* You can add head elements like meta tags here if needed */}
+      </head>
       <body>
         <AuthProvider>
           {children}
