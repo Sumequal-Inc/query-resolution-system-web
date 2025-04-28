@@ -16,7 +16,6 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
-import Image from 'next/image';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -46,8 +45,9 @@ export default function LoginPage() {
             item
             xs={12}
             sm={6}
+            component="div"
             sx={{
-              display: isMobile ? 'none' : 'flex',
+              display: { xs: 'none', sm: 'flex' },
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: '#f0f4f8',
@@ -57,7 +57,7 @@ export default function LoginPage() {
           >
             <AdbIcon sx={{ fontSize: 100, color: 'primary.main' }} />
             <Typography variant="h5" mt={2} color="primary">
-              Query resolution System
+              Query Resolution System
             </Typography>
             <Typography variant="body1" textAlign="center" mt={1} color="text.secondary">
               Smart Support for Tech, HR, Sales, and more.
@@ -65,7 +65,7 @@ export default function LoginPage() {
           </Grid>
 
           {/* Right Side (Form) */}
-          <Grid item xs={12} sm={6} sx={{ p: { xs: 4, sm: 6 } }}>
+          <Grid item xs={12} sm={6} component="div" sx={{ p: { xs: 4, sm: 6 } }}>
             <Box>
               <Typography variant="h4" gutterBottom>
                 Welcome Back
